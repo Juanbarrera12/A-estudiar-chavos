@@ -1,5 +1,6 @@
 # A-estudiar-chavos
 
+```bash
 Repositorio para realizar pruebas y aprender
 
 Para tener el repositorio en la pc: git clone https://github.com/Juanbarrera12/A-estudiar-chavos.git
