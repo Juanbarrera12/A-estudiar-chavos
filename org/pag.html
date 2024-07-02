@@ -1,24 +1,25 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="utf-8">
-        <meta name="author" content="CODESPRINTERS">
-        <meta name="description" content="descripcion sitio web">
-        <meta name="keywords" content=" tutoriales,html,desarrollo web">
-        <title>Estructura de la cabecera</title>
-        <link rel="icon" href="img/Icono.jpg">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="CODESPRINTERS">
+    <meta name="description" content="descripcion sitio web">
+    <meta name="keywords" content="tutoriales,html,desarrollo web">
+    <title>Estructura de la cabecera</title>
+    <link rel="icon" href="img/Icono.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Playwrite+ES+Deco:wght@100..400&display=swap" rel="stylesheet">
-    <link href= "Style.css" type="text/css" rel ="stylesheet" media="">
-    <link rel="stylesheet" href="styles.css">
+    <link href="styles.css" type="text/css" rel="stylesheet" media="">
+    
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
-        <div class="circles">
-            <div class="circle green"></div>
-            <div class="circle yellow"></div>
-            <div class="circle orange"></div>
+        <div class="social-icons">
+            <div class="social-icon green"><i class="fab fa-facebook-f"></i></div>
+            <div class="social-icon yellow"><i class="fab fa-twitter"></i></div>
+            <div class="social-icon orange"><i class="fab fa-instagram"></i></div>
         </div>
         <h1>LOGOTIPO</h1>
         <nav>
@@ -60,19 +61,26 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Integer hendrerit finibus justo, ac dignissim elit. Integer malesuada lectus justo, ac dignissim elit. Integer hendrerit finibus justo, ac dignissim elit. Integer malesuada lectus justo.</p>
             </article>
             <aside>
-                <div class="ingreso-header">Ingreso</div>
-                <form action="#">
-                    <label for="usuario">Usuario</label>
-                    <input type="text" id="usuario" name="usuario">
-                    <label for="contrasena">Contraseña</label>
-                    <input type="password" id="contrasena" name="contrasena">
-                    <button type="submit">Enviar</button>
-                </form>
+                <div class="ingreso-header">
+                    <h3>Ingreso</h3>
+                    <form action="#">
+                        <label for="usuario">Usuario</label>
+                        <input type="text" id="usuario" name="usuario">
+                        <label for="contrasena">Contraseña</label>
+                        <input type="password" id="contrasena" name="contrasena">
+                        <div class="submit-button">
+                            <button type="submit">Enviar</button>
+                        </div>
+                    </form>
+                </div>
             </aside>
         </section>
     </main>
     <footer>
         © Todos los derechos reservados
     </footer>
+    <div id="chat-button">
+        <button>Chat</button>
+    </div>
 </body>
 </html>

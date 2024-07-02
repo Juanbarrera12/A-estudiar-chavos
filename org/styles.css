@@ -5,6 +5,10 @@ body {
     background-color: #f4f4f4;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 header {
     background-color: white;
     padding: 20px;
@@ -19,7 +23,7 @@ header h1 {
     margin: 0;
 }
 
-.circles {
+.social-icons {
     position: absolute;
     top: 10px;
     right: 10px;
@@ -27,22 +31,33 @@ header h1 {
     gap: 10px;
 }
 
-.circle {
-    width: 20px;
-    height: 20px;
+.social-icon {
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
 }
 
-.green {
+.social-icon.green {
     background-color: #008000;
 }
 
-.yellow {
+.social-icon.yellow {
     background-color: #FFFF00;
+    color: black;
 }
 
-.orange {
+.social-icon.orange {
     background-color: #FFA500;
+}
+
+.social-icon i {
+    font-size: 20px;
 }
 
 nav {
@@ -57,6 +72,11 @@ nav button {
     margin: 5px;
     cursor: pointer;
     border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav button:hover {
+    background-color: #704a29; 
 }
 
 main {
@@ -110,11 +130,16 @@ main {
 .bottom-section aside a {
     display: block;
     margin: 10px 0;
-    color: white;
+    color: #ffffff; 
     text-decoration: none;
     padding: 10px;
-    background-color: #8b5e34;
+    background-color: #704a29; 
     border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.bottom-section aside a:hover {
+    background-color: #966a44; 
 }
 
 .bottom-section article {
@@ -131,12 +156,20 @@ main {
 }
 
 .bottom-section .ingreso-header {
-    background-color: #8b5e34;
+    background-color: #007bff; 
     color: white;
-    padding: 10px;
+    padding: 15px;
     text-align: center;
     border-radius: 5px;
     margin-bottom: 10px;
+}
+
+.bottom-section .ingreso-header h3 {
+    margin-bottom: 10px;
+}
+
+.bottom-section .ingreso-header:hover {
+    background-color: #007bff; 
 }
 
 .bottom-section form {
@@ -155,14 +188,19 @@ main {
     border: 1px solid #ccc;
 }
 
-.bottom-section form button {
-    background-color: #8b5e34;
+.bottom-section form button[type="submit"] {
+    background-color: #007bff; 
     color: white;
     border: none;
     padding: 10px;
     margin-top: 10px;
     cursor: pointer;
     border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.bottom-section form button[type="submit"]:hover {
+    background-color: #0056b3; 
 }
 
 footer {
@@ -172,23 +210,23 @@ footer {
     border-top: 2px solid #ccc;
     margin-top: 20px;
 }
-* {
 
-    box-sizing: border-box;
-    
-    }
-    .menu {
-    
-     width: 25%;
-    
-     float: left;
-    
-    }
-    
-    .main {
-    
-     width: 75%;
-    
-     float: left;
-    
-    }
+#chat-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+#chat-button button {
+    background-color: #007bff; 
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#chat-button button:hover {
+    background-color: #0056b3; 
+}
