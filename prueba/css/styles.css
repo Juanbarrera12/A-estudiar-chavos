@@ -1,0 +1,167 @@
+h1 {
+    font-family: sans-serif;
+    font-weight: bolder;
+    background-color: #444;
+    margin: auto;
+    padding: 15px;
+    text-align: center;
+    color: #fffa;
+}
+
+body{
+    background-color: #222;
+}
+
+.divi{
+    background-color: #111;
+    border-radius: 15px;
+    box-shadow: 0 0 7px #fff6;
+}
+
+
+.team{
+    width: 30%;
+    font-family:Arial, Helvetica, sans-serif;
+    text-align: center;
+    background-color: #111;
+    color: #999;
+    font-weight: bold;
+    margin: auto;
+    font-size: larger;
+    color: #ddd;
+}
+
+#results {
+    margin: 20px auto;
+    max-width: 600px;
+    padding: 10px;
+}
+
+.team-score {
+    display: flex;
+    flex-direction: column; /* Los equipos y resultados estarán uno encima del otro */
+    align-items: center;
+    width: 100%; /* Para que ocupen el mismo ancho */
+    text-align: center;
+    margin: auto;
+    font-weight: bold;
+    margin: auto;
+    font-size: larger;
+    color: #ddd;
+        font-size: 1.7em;
+    font-weight: bold;
+    margin-top: 5px;
+    text-align: center;
+    margin: auto;
+    border-left: 5px solid #6667;
+    border-right: 5px solid #6667;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+div.score {
+    flex-direction: column; /* Los equipos y resultados estarán uno encima del otro */
+    align-items: center;
+    font-size: 1.7em;
+    font-weight: bold;
+    margin-top: 5px;
+    text-align: center;
+    margin: auto;
+    border-left: 5px solid #6667;
+    border-right: 5px solid #6667;
+    border-radius: 5px;
+    padding: 15px;
+    align-items: center;
+
+}
+
+
+.status {
+    font-style: italic;
+    color: #666;
+    margin-top: 5px;
+    text-align: center;
+    margin: auto;
+}
+
+/* Eliminado para evitar conflictos */
+div.match {
+    background-color: #111; /* Fondo claro para el contenido de los partidos */
+    display: flex;
+    align-items: center; 
+    padding: 15px;
+    
+    font-family:Arial, Helvetica, sans-serif;
+    text-align: center;
+    background-color: #111;
+    color: #999;
+    justify-content: space-between;
+    border-bottom: 3px solid #4449;
+    margin-bottom: 20px;
+}
+div.match:last-child{
+    border-bottom: none;
+}
+
+p{
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: bolder;
+    color: #999;
+    font-size: large;
+
+}
+.match-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #111;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.box{
+    margin-right: 150px;
+    text-align: center;
+    width: 140px;
+    height: 350px;
+    position: absolute;
+    margin-top: 20px;
+    padding: 15px;
+    background-color: transparent;
+    z-index: 40;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #fff6;
+    background-color: #3333;
+    overflow: auto;
+}
+
+.menu{
+    position: sticky;
+    font-size: x-large;
+    color: #999;
+    text-align: center;
+    overflow:auto;
+}
+
+.lista{
+    position: absolute;
+    left: 0;
+    margin-left: none;
+    font-size: x-large;
+    color: #999;
+    text-align: center;
+    list-style: none;
+}
+.list{
+    margin-top: 25px;
+    color: #777;
+}
+
+
+
+
+
