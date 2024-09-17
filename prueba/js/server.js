@@ -19,8 +19,7 @@ app.get('/api/matches', async (req, res) => {
             }
         });
 
-        // Agregando log para depuración
-        console.log("Datos obtenidos de la API:", response.data);
+        console.log("Datos obtenidos de la API (matches):", response.data);
 
         res.json(response.data);
     } catch (error) {
@@ -29,7 +28,44 @@ app.get('/api/matches', async (req, res) => {
     }
 });
 
+// Endpoint para obtener las tablas de las ligas
+app.get('/api/league-tables', async (req, res) => {
+    try {
+        const response = await axios.get('https://api.football-data.org/v4/competitions', {
+            headers: {
+                'X-Auth-Token': 'b10386809ca145f388fb495cfaa6b2f1'  // Reemplaza con tu API Key de football-data.org
+            }
+        });
+
+        const importantLeagues = ['PL', 'PD', 'SA', 'BL1', 'FL1']; // Códigos de ligas importantes
+        const filteredCompetitions = response.data.competitions.filter(competition => importantLeagues.includes(competition.code));
+
+        const leagueTables = [];
+
+        for (const league of filteredCompetitions) {
+            const standingsResponse = await axios.get(`https://api.football-data.org/v4/competitions/${league.id}/standings`, {
+                headers: {
+                    'X-Auth-Token': 'b10386809ca145f388fb495cfaa6b2f1'
+                }
+            });
+
+            console.log(`Tabla de ${league.name}:`, standingsResponse.data);
+
+            leagueTables.push({
+                name: league.name,
+                standings: standingsResponse.data.standings
+            });
+        }
+
+        res.json({ competitions: leagueTables });
+    } catch (error) {
+        console.error('Error al obtener las tablas de las ligas:', error);
+        res.status(500).send('Error al obtener las tablas de las ligas');
+    }
+});
+
 // Iniciar el servidor
 app.listen(PORT, () => {
     console.log(`Servidor corriendo en http://localhost:${PORT}`);
 });
+

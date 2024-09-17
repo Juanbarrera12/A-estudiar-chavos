@@ -139,29 +139,58 @@ p{
     overflow: auto;
 }
 
-.menu{
-    position: sticky;
-    font-size: x-large;
-    color: #999;
-    text-align: center;
-    overflow:auto;
+/* Contenedor del menú desplegable */
+.dropdown-menu {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Estilo del botón del menú */
+  .dropbtn {
+    background-color: #333;
+    color: white;
+    padding: 14px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
 }
 
-.lista{
+.dropbtn:hover {
+    background-color: #555; /* Cambia el color al pasar el ratón */
+}
+
+  /* Contenido del menú desplegable */
+.dropdown-content {
+    display: none;
     position: absolute;
-    left: 0;
-    margin-left: none;
-    font-size: x-large;
-    color: #999;
-    text-align: center;
-    list-style: none;
-}
-.list{
-    margin-top: 25px;
-    color: #777;
+    background-color: #333;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 5px;
 }
 
+  /* Estilo de los enlaces dentro del menú */
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border-bottom: 1px solid #444;
+}
 
+.dropdown-content a:hover {
+    background-color: #555; /* Cambia el fondo al pasar el ratón */
+}
 
+  /* Mostrar el menú al pasar el ratón sobre el botón */
+.dropdown-menu:hover .dropdown-content {
+    display: block;
+}
 
-
+.dropdown-menu {
+    position: absolute;
+    left: 10px;
+    top: 80px;
+}

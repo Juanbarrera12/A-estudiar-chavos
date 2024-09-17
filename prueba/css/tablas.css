@@ -1,0 +1,153 @@
+/* General */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #222;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    width: 96.3%;
+    font-family: sans-serif;
+    font-weight: bolder;
+    background-color: #444;
+    margin: 8px 8px;
+    padding: 15px;
+    text-align: center;
+    color: #fffa;
+}
+
+h2 {
+    color: #eee;
+    background-color: #444;
+    padding: 15px;
+    margin: auto;
+    font-weight: bolder;
+    text-align: center;
+    text-transform: uppercase;
+
+}
+
+/* Container */
+#tables {
+    width: 90%;
+    max-width: 1200px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* League Table */
+.competition {
+    background-color: #111;
+    border: none;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 0 7px #fff3;
+    margin-top: 32px;
+}
+
+.competition h2 {
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+}
+
+.datos {
+    text-align: center;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 2px solid #6667;
+}
+
+table th, table td {
+    text-align: left;
+    padding: 12px;
+    border-bottom: 1px solid #6667;
+}
+
+table th {
+    background-color: #4443;
+    color: #ddd;
+    font-weight: bold;
+}
+
+table td {
+    color: #fff9;
+}
+
+tr:nth-child(even) {
+    background-color: #111;
+}
+
+/* Team Names */
+td.team-name {
+    font-weight: bold;
+}
+
+/* Contenedor del menú desplegable */
+.dropdown-menu {
+    position: relative;
+    display: inline-block;
+}
+
+  /* Estilo del botón del menú */
+.dropbtn {
+    background-color: #333;
+    color: white;
+    padding: 14px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    align-items: left;
+    display: flex;
+    justify-content: left;
+}
+
+.dropbtn:hover {
+    background-color: #555; /* Cambia el color al pasar el ratón */
+}
+
+  /* Contenido del menú desplegable */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 5px;
+}
+
+  /* Estilo de los enlaces dentro del menú */
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border-bottom: 1px solid #444;
+}
+
+.dropdown-content a:hover {
+    background-color: #555; /* Cambia el fondo al pasar el ratón */
+}
+
+  /* Mostrar el menú al pasar el ratón sobre el botón */
+.dropdown-menu:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-menu {
+    position: absolute;
+    left: 10px;
+    top: 80px;
+}
