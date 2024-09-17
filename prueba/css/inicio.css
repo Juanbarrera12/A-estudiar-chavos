@@ -1,0 +1,57 @@
+.menu {
+    display: flex;
+    justify-content: center; /* Para centrar horizontalmente */
+    background-color: #333; /* Color de fondo del menú */
+    padding: 10px; /* Espaciado alrededor de los enlaces */
+}
+
+.menu a {
+    text-decoration: none; /* Quita el subrayado de los enlaces */
+    color: white; /* Color del texto */
+    padding: 14px 20px; /* Espaciado dentro de cada enlace */
+    text-align: center;
+    display: block;
+}
+
+.menu a:hover {
+    background-color: #555; /* Color de fondo cuando se pasa el ratón */
+}
+body {
+    background-color: #222;
+}
+h1 {
+    font-family: sans-serif;
+    font-weight: bolder;
+    background-color: #444;
+    margin: auto;
+    padding: 15px;
+    text-align: center;
+    color: #fffa;
+}
+.section-divider {
+    border: none;
+    height: 2px;
+    background-color: #333;
+    margin: 20px 0;
+    width: 100%;
+}
+
+footer {
+    text-align: left;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    margin-top: 40px;
+}
+
+.contacto {
+    color: #fffa;
+    text-decoration: none;
+    background-color: #333;
+    padding: 10px ;
+    text-align: left;
+}
+
+.contacto:hover {
+    background-color: #555;
+}
