@@ -24,23 +24,27 @@ async function fetchLiveScores() {
             const matchElement = document.createElement('div');
             matchElement.className = 'match';
 
-            // Ajusta el acceso a las propiedades según la estructura real
             const homeTeamName = match.homeTeam.shortName || match.homeTeam.name;
             const awayTeamName = match.awayTeam.shortName || match.awayTeam.name;
 
             const homeScore = match.score.fullTime.home ?? 'Pendiente';
             const awayScore = match.score.fullTime.away ?? 'Pendiente';
 
-            console.log(`Equipo Local: ${homeTeamName}, Marcador: ${homeScore}`);
-            console.log(`Equipo Visitante: ${awayTeamName}, Marcador: ${awayScore}`);
+            const odds = match.odds;
 
             matchElement.innerHTML = `
                 <div class="team">${homeTeamName}</div>
                 <div class="score">${homeScore} | ${awayScore}</div>
                 <div class="team">${awayTeamName}</div>
+                <div class="odds">
+                    <p>Cuotas:</p>
+                    <p>Victoria Local: ${odds.home}</p>
+                    <p>Empate: ${odds.draw}</p>
+                    <p>Victoria Visitante: ${odds.away}</p>
+                </div>
             `;
 
-            resultsContainer.appendChild(matchElement);
+            document.body.appendChild(matchElement);
         });
     } catch (error) {
         console.error('Error fetching live scores:', error);
@@ -49,6 +53,7 @@ async function fetchLiveScores() {
         resultsContainer.innerHTML = '<p>Error al obtener los resultados. Por favor, inténtelo más tarde.</p>';
     }
 }
+
 document.addEventListener('DOMContentLoaded', () => {
     fetchLiveScores(); // Llama la función al cargar la página
 
