@@ -38,9 +38,7 @@ async function fetchLiveScores() {
                 <div class="team">${awayTeamName}</div>
                 <div class="odds">
                     <p>Cuotas:</p>
-                    <p>Victoria Local: ${odds.home}</p>
-                    <p>Empate: ${odds.draw}</p>
-                    <p>Victoria Visitante: ${odds.away}</p>
+                    <p>1: ${odds.home} X: ${odds.draw} 2: ${odds.away}</p>
                 </div>
             `;
 
