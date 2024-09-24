@@ -42,7 +42,8 @@ async function fetchLiveScores() {
                 </div>
             `;
 
-            document.body.appendChild(matchElement);
+            resultsContainer.appendChild(matchElement);
+
         });
     } catch (error) {
         console.error('Error fetching live scores:', error);
